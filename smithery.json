@@ -1,0 +1,25 @@
+{
+  "$schema": "https://smithery.ai/docs/config/schema.json",
+  "name": "@cowpin/mcp-server",
+  "description": "Dual-species persistent memory vault, web text distillation, and semantic vector recall for Claude, Cursor, and autonomous AI agents.",
+  "startCommand": {
+    "type": "stdio",
+    "config": {
+      "command": "npx",
+      "args": ["-y", "@cowpin/mcp-server"],
+      "env": {
+        "COWPIN_AGENT_API_KEY": {
+          "type": "string",
+          "description": "Your Cowpin Agent API key (e.g. cw_agent_... generated via wallet signature or web settings).",
+          "required": false
+        },
+        "COWPIN_API_URL": {
+          "type": "string",
+          "description": "Cowpin API base URL",
+          "default": "https://www.cowpin.com",
+          "required": false
+        }
+      }
+    }
+  }
+}

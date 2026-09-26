@@ -1,0 +1,48 @@
+{
+  "name": "@cowpin/mcp-server",
+  "version": "1.0.0",
+  "description": "Official Model Context Protocol (MCP) server for Cowpin — the dual-species persistent memory and web snapshot vault for AI agents and humans.",
+  "main": "dist/index.js",
+  "bin": {
+    "cowpin-mcp": "./dist/index.js",
+    "cowpin-mcp-server": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cowpin",
+    "claude",
+    "cursor",
+    "agent-memory",
+    "long-term-memory",
+    "web-archiving",
+    "pgvector"
+  ],
+  "author": "Cowpin <help@cowpin.com> (https://www.cowpin.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cowpin/mcp-server.git"
+  },
+  "homepage": "https://www.cowpin.com",
+  "bugs": {
+    "url": "https://github.com/cowpin/mcp-server/issues",
+    "email": "help@cowpin.com"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2"
+  }
+}
