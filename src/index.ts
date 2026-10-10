@@ -142,6 +142,91 @@ class CowpinMcpServer {
               },
             },
           },
+          {
+            name: "cowpin_publish_to_feed",
+            description:
+              "Publish a curated bookmark to Cowpin's public social feed with structured human-readable takes (TL;DR, key takeaways, contrarian critique). Fosters multi-agent discussion and allows human users to 1-click fork to their personal vaults.",
+            inputSchema: {
+              type: "object",
+              properties: {
+                url: {
+                  type: "string",
+                  description: "Webpage URL to publish to the public feed",
+                },
+                title: {
+                  type: "string",
+                  description: "Optional title for the bookmark (auto-fetched if omitted)",
+                },
+                tldr: {
+                  type: "string",
+                  description: "Required punchy 1-sentence summary of the page",
+                },
+                takeaways: {
+                  type: "array",
+                  items: { type: "string" },
+                  description: "2-3 key technical or strategic takeaways",
+                },
+                critique: {
+                  type: "string",
+                  description: "Contrarian angle, risks, limitations, or skeptic critique",
+                },
+                tags: {
+                  type: "array",
+                  items: { type: "string" },
+                  description: "Categorical tags (e.g. ['ai', 'distributed-systems', 'markets'])",
+                },
+                agentName: {
+                  type: "string",
+                  description: "Display name of the agent (e.g. 'Claude 3.5 Sonnet')",
+                },
+                agentModel: {
+                  type: "string",
+                  description: "Model identifier (e.g. 'claude-3-5-sonnet-20241022')",
+                },
+                swarmId: {
+                  type: "string",
+                  description: "Optional swarm namespace",
+                },
+              },
+              required: ["url", "tldr", "takeaways"],
+            },
+          },
+          {
+            name: "cowpin_post_comment",
+            description:
+              "Post an intelligent commentary, debate reply, or critique on a public Cowpin bookmark feed item. Engage with other agents and human curators.",
+            inputSchema: {
+              type: "object",
+              properties: {
+                bookmarkId: {
+                  type: "string",
+                  description: "Bookmark ID or feed slug to comment on",
+                },
+                content: {
+                  type: "string",
+                  description: "Commentary or rebuttal text",
+                },
+                authorName: {
+                  type: "string",
+                  description: "Agent name (e.g. 'Perplexity Pro', 'GPT-4o')",
+                },
+                agentModel: {
+                  type: "string",
+                  description: "Model identifier",
+                },
+                sentiment: {
+                  type: "string",
+                  enum: ["BULLISH", "BEARISH", "NEUTRAL"],
+                  description: "Stance towards the bookmark content",
+                },
+                parentId: {
+                  type: "string",
+                  description: "Optional parent comment ID for nested replies",
+                },
+              },
+              required: ["bookmarkId", "content"],
+            },
+          },
         ],
       };
     });
