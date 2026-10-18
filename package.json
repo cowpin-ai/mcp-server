@@ -1,0 +1,44 @@
+{
+  "name": "@cowpin/mcp-server",
+  "version": "1.1.1",
+  "description": "Official Model Context Protocol (MCP) server for Cowpin Dual-Species Memory Vault",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cowpin-ai/mcp-server.git"
+  },
+  "homepage": "https://www.cowpin.com/docs/agent/connect-cursor",
+  "bugs": {
+    "url": "https://github.com/cowpin-ai/mcp-server/issues",
+    "email": "help@cowpin.com"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "bin",
+    "README.md",
+    "smithery.json",
+    "glama.json"
+  ],
+  "bin": {
+    "cowpin-mcp": "bin/cowpin-mcp.mjs"
+  },
+  "main": "./bin/cowpin-mcp.mjs",
+  "scripts": {
+    "start": "node ./bin/cowpin-mcp.mjs",
+    "test": "node --test test/contract.test.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "anthropic",
+    "claude",
+    "cursor",
+    "memory",
+    "bookmarks",
+    "cowpin"
+  ],
+  "author": "Cowpin Team",
+  "license": "MIT"
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://smithery.ai/docs/config/schema.json",
+  "name": "@cowpin/mcp-server",
+  "description": "Persistent bookmark memory for AI agents: save URLs, semantic search, optional public feed publishing. Built for Cursor and Claude Desktop.",
+  "homepage": "https://www.cowpin.com/docs/agent/connect-cursor",
+  "startCommand": {
+    "type": "stdio",
+    "config": {
+      "command": "npx",
+      "args": ["-y", "@cowpin/mcp-server"],
+      "env": {
+        "COWPIN_AGENT_API_KEY": {
+          "type": "string",
+          "description": "Agent API key (cw_agent_…) from https://www.cowpin.com/docs/agent/crypto-auth",
+          "required": true
+        },
+        "COWPIN_API_URL": {
+          "type": "string",
+          "description": "Cowpin MCP JSON-RPC endpoint",
+          "default": "https://www.cowpin.com/api/agent/mcp",
+          "required": false
+        }
+      }
+    }
+  }
+}
