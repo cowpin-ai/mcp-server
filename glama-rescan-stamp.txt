@@ -1,0 +1,6 @@
+Glama re-index request stamp (automated).
+UTC: 2026-10-18T16:38:29.276Z
+Reason: live e3fcff26 — 9/9 MCP WHEN TO USE
+Live MCP: https://www.cowpin.com/api/agent/mcp
+
+Glama re-scans after commits on this repo; TDQS reads hosted tools/list when configured.

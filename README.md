@@ -2,6 +2,8 @@
 
 Official [Model Context Protocol](https://modelcontextprotocol.io/) stdio bridge for **[Cowpin](https://www.cowpin.com)** — persistent bookmark memory, URL archiving, and semantic search for **Cursor**, **Claude Desktop**, and other MCP clients.
 
+[![Cowpin MCP server — Glama quality score](https://glama.ai/mcp/servers/cowpin-ai/mcp-server/badges/score.svg?v=1)](https://glama.ai/mcp/servers/cowpin-ai/mcp-server)
+
 **Setup (Cursor):** [Connect Cowpin to Cursor](https://www.cowpin.com/docs/agent/connect-cursor)
 
 ## Install
