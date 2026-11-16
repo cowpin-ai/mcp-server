@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "com.cowpin/mcp-server",
+  "title": "Cowpin",
+  "description": "Bookmark memory for AI agents: save links, search inside saved pages, recall what you read.",
+  "websiteUrl": "https://www.cowpin.com/docs/agent/connect-cursor",
+  "repository": {
+    "url": "https://github.com/cowpin-ai/mcp-server",
+    "source": "github"
+  },
+  "version": "1.1.2",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@cowpin/mcp-server",
+      "version": "1.1.2",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "COWPIN_AGENT_API_KEY",
+          "description": "Agent API key (cw_agent_…) from https://www.cowpin.com/docs/agent/crypto-auth",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "COWPIN_API_URL",
+          "description": "Cowpin MCP endpoint (default https://www.cowpin.com/api/agent/mcp)",
+          "isRequired": false
+        }
+      ]
+    }
+  ]
+}

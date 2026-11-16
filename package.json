@@ -1,6 +1,7 @@
 {
   "name": "@cowpin/mcp-server",
-  "version": "1.1.1",
+  "mcpName": "com.cowpin/mcp-server",
+  "version": "1.1.2",
   "description": "Official Model Context Protocol (MCP) server for Cowpin Dual-Species Memory Vault",
   "type": "module",
   "repository": {
@@ -16,10 +17,11 @@
     "access": "public"
   },
   "files": [
-    "bin",
     "README.md",
-    "smithery.json",
-    "glama.json"
+    "bin",
+    "glama.json",
+    "server.json",
+    "smithery.json"
   ],
   "bin": {
     "cowpin-mcp": "bin/cowpin-mcp.mjs"
