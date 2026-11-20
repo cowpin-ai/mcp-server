@@ -29,7 +29,8 @@
   "main": "./bin/cowpin-mcp.mjs",
   "scripts": {
     "start": "node ./bin/cowpin-mcp.mjs",
-    "test": "node --test test/contract.test.mjs"
+    "test": "node --test test/contract.test.mjs",
+    "clean": "rm -rf dist .turbo coverage *.tsbuildinfo"
   },
   "keywords": [
     "mcp",
